@@ -18,10 +18,6 @@ import java.util.List;
 public class PatientController {
     @Autowired
     PatientRepository patientRepository;
-    @GetMapping(path = "/login")
-    public String login(){
-        return "login";
-    }
 
     @GetMapping(path = "/patients")
     public String list(Model modele,
