@@ -20,7 +20,10 @@
                 <a class="nav-link" href="/patients">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/medecins">Medecins</a>
+                <a class="nav-link" th:href="@{medecins}">Medecins</a>
+            </li>
+            <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                <a class="nav-link" th:href="@{users}">Utilisateurs</a>
             </li>
 
             <!-- Dropdown -->

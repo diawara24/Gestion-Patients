@@ -21,7 +21,7 @@
             </div>
             <div class="ml-5 mr-5">
                 <div th:if="${param.error}" class="alert alert-danger ">
-                    <strong>username ou password incorrect</strong>
+                    <strong th:error="param.error">username ou password incorrect</strong>
                 </div>
             </div>
             <!-- Login Form -->

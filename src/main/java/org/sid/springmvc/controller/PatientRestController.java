@@ -16,8 +16,10 @@ import java.util.List;
 
 @RestController
 public class PatientRestController {
+
     @Autowired
     PatientRepository patientRepository;
+
 
     //Retourner la liste des patients au format json
     @GetMapping("/listePateint")

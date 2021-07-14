@@ -15,6 +15,8 @@ import java.util.Date;
 public class SpringmvcApplication implements CommandLineRunner {
     @Autowired
     private PatientRepository patientRepository;
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
     public static void main(String[] args) {
@@ -31,5 +33,7 @@ public class SpringmvcApplication implements CommandLineRunner {
        /* patientRepository.findAll().forEach(p->{
             System.out.println(p.getName());
         });*/
+
+        System.out.println(bCryptPasswordEncoder.encode("passer"));
     }
 }

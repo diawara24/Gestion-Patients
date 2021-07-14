@@ -19,6 +19,10 @@ public class PatientController {
     @Autowired
     PatientRepository patientRepository;
 
+    @GetMapping(path = "/index")
+    public String home(){
+        return "index";
+    }
     @GetMapping(path = "/patients")
     public String list(Model modele,
            @RequestParam(name="page", defaultValue = "0") int page,
